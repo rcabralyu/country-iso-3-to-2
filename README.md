@@ -1,37 +1,28 @@
 # country-iso-3-to-2
 
-> Convert a country code ISO 3166-1 Alpha-3 to ISO 3166-1 Alpha-2
+> Convert a country code ISO 3166-1 Alpha-3 to/from ISO 3166-1 Alpha-2
 
 ## Install
 
 ```sh
-$ npm install country-iso-3-to-2
+$ npm install rcabralyu/country-iso-3-to-2
 ```
 
 ## Usage
 
 ```js
-const getCountryISO2 = require("country-iso-3-to-2");
+const getISO2 = require("country-iso-3-to-2").getISO2;
+const getISO3 = require("country-iso-3-to-2").getISO3;
 
-getCountryISO2("BRA")
+getISO2("BRA")
 // "BR"
 
-getCountryISO2("USA")
+getISO2("USA")
 // "US"
+
+getISO3("BR")
+// "BRA"
+
+getISO3("US")
+// "USA"
 ``` 
-
-## API
-
-### getCountryISO2(countryCode)
-
-**Parameter**:
-A string with a country code in ISO 3166-1 Alpha-3
-
-**Return**:
-A string with the country code in ISO 3166-1 Alpha-2
-
----
-
-## License
-
-MIT © [VTEX](https://www.vtex.com)
